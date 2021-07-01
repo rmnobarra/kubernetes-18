@@ -100,7 +100,7 @@ nc -v <IP DO LOAD BALANCER> 6443
 Depois de atender todos os préreqs, vamos inicializar o cluster, começando pelo control plane. Para isso, execute em um dos masters:
 
 ```bash
-kubeadm init --control-plane-endpoint 172.31.10.125:6443 --upload-certs
+kubeadm init --control-plane-endpoint 172.31.8.70:6443 --upload-certs
 ```
 
 Agora que o cluster foi inicializado, precisamos de algo para viabilizar a comunicação entre o cluster, é aqui que entra a cni
@@ -133,7 +133,7 @@ kubectl get pods -n kube-system
 
 ## anatomia k8s
 
-![anatomia k8s](imgagens/arquitetura_k8s.png)
+![anatomia k8s](imagens/arquitetura_k8s.png)
 
 
 * control plane
